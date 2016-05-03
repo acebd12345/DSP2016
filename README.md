@@ -1,16 +1,27 @@
 # DSP2016
 St
 1.
+
 import numpy as np
+
 %matplotlib inline
+
 f=open('coindesk-bpi-USD-close.csv')
+
 s=f.read()
+
 sL=s.split('\n')
+
 xL=[x.split(',')[-1] for x in sL]
+
 yL=[float(x) for x in xL[1:-4]]
+
 priceData=np.array(yL)
+
 len(priceData)
+
 2112
+
 2.
 import thinkdsp as td
 def movingAverage(x, length):
